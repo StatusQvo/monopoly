@@ -1,0 +1,10 @@
+<svg width="136" height="10" xmlns="http://www.w3.org/2000/svg">
+  <!-- Зелёная точка -->
+  <circle cx="131" cy="5" r="5" fill="green"></circle>
+
+  <!-- Зелёная линия -->
+  <line x1="10" y1="5" x2="131" y2="5" stroke="green" stroke-width="2"></line>
+
+  <!-- Острый наконечник (треугольник влево) -->
+  <polygon points="10,0 0,5 10,10" fill="green"></polygon>
+</svg>

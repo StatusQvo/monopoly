@@ -1,6 +1,9 @@
 .amnfr {
   .new-player-container {
     margin-bottom: 4em;
+    .accordion-button {
+      box-shadow: 0px 4px 3px inset #9ebbff;
+    }
     button.btn-add {
       background-color: #5fbd01;
       border-radius: 1rem;
