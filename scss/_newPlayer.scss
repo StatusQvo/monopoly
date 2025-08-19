@@ -25,5 +25,12 @@
         line-height: 1;
       }
     }
+    .repeat-error {
+      display: none;
+      color: darkmagenta;
+    }
+    .repeat-error.active-error {
+      display: block;
+    }
   }
 }

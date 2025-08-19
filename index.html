@@ -8,7 +8,9 @@
   </head>
   <body class="amnfr">
     <div class="container main-container py-4">
-      <div class="row g-3 align-items-center justify-content-center">
+      <div
+        class="newPlayer-container row g-3 align-items-center justify-content-center"
+      >
         <div class="col-8 col-md-6 col-lg-8">
           <div class="accordion" id="accordionNewPlayer">
             <div class="accordion-item new-player-container">
@@ -44,6 +46,9 @@
                           class="form-control"
                           required
                         />
+                        <p class="repeat-error">
+                          Такое имя уже есть. Придумайте другое
+                        </p>
                       </div>
                       <div class="col-8 col-md-10 col-lg-5">
                         <label for="start-balance" class="form-label mt-3"
@@ -82,125 +87,21 @@
 
       <div class="players-container container">
         <div class="row">
-          <table class="col-12 mb-6 lg-6">
+          <table class="players-table col-12 mb-6 lg-6">
             <thead>
               <tr>
-                <th>Имя игрока</th>
-                <th>Баланс</th>
-                <th>$ количество</th>
-                <th>Отнять / Прибавить</th>
-                <th>Получатель / Отправитель</th>
-                <th>История</th>
+                <th class="ps-2 pe-2">Имя игрока</th>
+                <th class="ps-2 pe-2">Баланс</th>
+                <th class="ps-2 pe-2">$ количество</th>
+                <th class="ps-2 pe-2">Отнять / Прибавить</th>
+                <th class="ps-2 pe-2">Получатель / Отправитель</th>
+                <th class="ps-2 pe-2">Перевести</th>
+                <th class="ps-2 pe-2">История</th>
+                <th class="ps-2 pe-2">Удалить</th>
               </tr>
             </thead>
             <tbody>
-              <tr name="player-item">
-                <td
-                  name="player-name"
-                  class="player-list-item col-6 col-md-6 col-lg-2"
-                >
-                  Игрок 1
-                </td>
-                <td
-                  name="player-balance"
-                  class="player-list-item col-6 col-md-6 col-lg-2"
-                >
-                  10.000.000
-                </td>
-                <td
-                  name="player-quantity"
-                  class="player-list-item col-6 col-md-6 col-lg-2"
-                >
-                  <input
-                    type="number"
-                    name="operation"
-                    class="form-control"
-                    step="1000"
-                    min="0"
-                    max="999000000"
-                    placeholder="0"
-                  />
-                </td>
-                <td name="player-operation" class="player-list-item">
-                  <div class="scroll">
-                    <div class="scroll__item"></div>
-                    <div
-                      class="scroll__description d-flex justify-content-between col-3"
-                    >
-                      <span>-</span>
-                      <span>+</span>
-                    </div>
-                  </div>
-                </td>
-                <td name="player-selector" class="player-list-item"></td>
-                <td
-                  name="player-history"
-                  class="player-list-item col-8 col-md-6 col-lg-3 p-1"
-                >
-                  <div class="accordion mt-2 mb-2" id="accordionSelector">
-                    <div
-                      class="accordion-item player-history-container ms-2 me-2"
-                    >
-                      <h2 class="accordion-header" id="headingTwo">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#collapseTwo"
-                          aria-expanded="true"
-                          aria-controls="collapseTwo"
-                        >
-                          История средств
-                        </button>
-                      </h2>
-                      <div
-                        id="collapseTwo"
-                        class="accordion-collapse collapse"
-                        aria-labelledby="headingTwo"
-                        data-bs-parent="#accordionSelector"
-                      >
-                        <div class="accordion-body">
-                          <div class="transaction">
-                            <table>
-                              <thead>
-                                <tr>
-                                  <th>От кого</th>
-                                  <th>Движение средств</th>
-                                  <th>Куда</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>Игрок 1</td>
-                                  <td>
-                                    <div class="move-pic move-pic--left">
-                                      <span>15.000.000</span>
-                                    </div>
-                                  </td>
-                                  <td>Вход в игру</td>
-                                </tr>
-                                <tr>
-                                  <td>Игрок 1</td>
-                                  <td>
-                                    <div class="move-pic move-pic--right">
-                                      <span>5.000.000</span>
-                                    </div>
-                                  </td>
-                                  <td>Игрок 2</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                        <!-- accordion body  -->
-                      </div>
-                      <!-- accordion collapse  -->
-                    </div>
-                    <!-- accordion item  -->
-                  </div>
-                  <!-- accordion  -->
-                </td>
-              </tr>
+              <!--PLAYERS HERE-->
             </tbody>
           </table>
         </div>
@@ -209,6 +110,6 @@
     </div>
     <!-- container  -->
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="js/script.js"></script>
+    <script type="module" src="./js/script.js"></script>
   </body>
 </html>

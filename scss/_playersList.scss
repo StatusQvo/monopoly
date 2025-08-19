@@ -1,5 +1,6 @@
 .amnfr {
   .players-container {
+    margin-bottom: 300px;
     table {
       tr {
         text-align: center;
@@ -67,32 +68,61 @@
             }
           }
         }
+        .custom-select-wrapper {
+          position: relative;
+          display: inline-block;
+          width: 186px;
+
+          .custom-select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 90%;
+            padding: 0 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background-color: #fff;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="12" viewBox="0 0 24 24" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            cursor: pointer;
+          }
+        }
         .accordion {
+          width: 250px;
           .accordion-body {
             padding: 5px;
             .transaction {
               table {
                 width: 100%;
                 font-size: 12px;
+                th {
+                  white-space: nowrap;
+                }
                 tbody {
-                  .move-pic {
-                    position: relative;
-                    height: 26px;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    span {
-                      position: absolute;
-                      top: 0;
-                      left: 60px;
-                      font-size: 10px;
-                      color: #949494;
+                  td {
+                    white-space: nowrap;
+                    .move-pic {
+                      position: relative;
+                      height: 30px;
+                      background-repeat: no-repeat;
+                      background-position: center;
+                      span {
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        font-size: 10px;
+                        color: #949494;
+                        transform: translateX(-50%);
+                      }
                     }
-                  }
-                  .move-pic--right {
-                    background-image: url('../media/arrow-right.svg');
-                  }
-                  .move-pic--left {
-                    background-image: url('../media/arrow-left.svg');
+                    .move-pic--right {
+                      background-image: url('../media/arrow-right.svg');
+                    }
+                    .move-pic--left {
+                      background-image: url('../media/arrow-left.svg');
+                    }
                   }
                 }
               }
@@ -101,6 +131,34 @@
           .accordion-button {
             height: 20px;
             background-color: #c4fff4;
+          }
+        }
+      }
+      [name='player-push'] {
+        button {
+          background-color: #139413;
+          border: none;
+          border-radius: 8px;
+          img {
+            padding-bottom: 4px;
+          }
+          &:hover {
+            background-color: #37d137;
+          }
+        }
+      }
+      [name='player-delete'] {
+        button {
+          background: none;
+          border: none;
+          img {
+            height: 30px;
+            padding-bottom: 4px;
+          }
+          &:hover {
+            img {
+              filter: brightness(0.8);
+            }
           }
         }
       }

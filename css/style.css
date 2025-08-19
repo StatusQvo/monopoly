@@ -11880,7 +11880,17 @@ textarea.form-control-lg {
   font-weight: bold;
   line-height: 1;
 }
+.amnfr .new-player-container .repeat-error {
+  display: none;
+  color: darkmagenta;
+}
+.amnfr .new-player-container .repeat-error.active-error {
+  display: block;
+}
 
+.amnfr .players-container {
+  margin-bottom: 300px;
+}
 .amnfr .players-container table tr {
   text-align: center;
 }
@@ -11943,6 +11953,29 @@ textarea.form-control-lg {
   transform: translateX(46px);
   transition: transform 0.3s ease-in-out;
 }
+.amnfr .players-container table .player-list-item .custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 186px;
+}
+.amnfr .players-container table .player-list-item .custom-select-wrapper .custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 90%;
+  padding: 0 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="12" viewBox="0 0 24 24" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  cursor: pointer;
+}
+.amnfr .players-container table .player-list-item .accordion {
+  width: 250px;
+}
 .amnfr .players-container table .player-list-item .accordion .accordion-body {
   padding: 5px;
 }
@@ -11950,28 +11983,57 @@ textarea.form-control-lg {
   width: 100%;
   font-size: 12px;
 }
-.amnfr .players-container table .player-list-item .accordion .accordion-body .transaction table tbody .move-pic {
+.amnfr .players-container table .player-list-item .accordion .accordion-body .transaction table th {
+  white-space: nowrap;
+}
+.amnfr .players-container table .player-list-item .accordion .accordion-body .transaction table tbody td {
+  white-space: nowrap;
+}
+.amnfr .players-container table .player-list-item .accordion .accordion-body .transaction table tbody td .move-pic {
   position: relative;
-  height: 26px;
+  height: 30px;
   background-repeat: no-repeat;
   background-position: center;
 }
-.amnfr .players-container table .player-list-item .accordion .accordion-body .transaction table tbody .move-pic span {
+.amnfr .players-container table .player-list-item .accordion .accordion-body .transaction table tbody td .move-pic span {
   position: absolute;
   top: 0;
-  left: 60px;
+  left: 50%;
   font-size: 10px;
   color: #949494;
+  transform: translateX(-50%);
 }
-.amnfr .players-container table .player-list-item .accordion .accordion-body .transaction table tbody .move-pic--right {
+.amnfr .players-container table .player-list-item .accordion .accordion-body .transaction table tbody td .move-pic--right {
   background-image: url("../media/arrow-right.svg");
 }
-.amnfr .players-container table .player-list-item .accordion .accordion-body .transaction table tbody .move-pic--left {
+.amnfr .players-container table .player-list-item .accordion .accordion-body .transaction table tbody td .move-pic--left {
   background-image: url("../media/arrow-left.svg");
 }
 .amnfr .players-container table .player-list-item .accordion .accordion-button {
   height: 20px;
   background-color: #c4fff4;
+}
+.amnfr .players-container table [name=player-push] button {
+  background-color: #139413;
+  border: none;
+  border-radius: 8px;
+}
+.amnfr .players-container table [name=player-push] button img {
+  padding-bottom: 4px;
+}
+.amnfr .players-container table [name=player-push] button:hover {
+  background-color: #37d137;
+}
+.amnfr .players-container table [name=player-delete] button {
+  background: none;
+  border: none;
+}
+.amnfr .players-container table [name=player-delete] button img {
+  height: 30px;
+  padding-bottom: 4px;
+}
+.amnfr .players-container table [name=player-delete] button:hover img {
+  filter: brightness(0.8);
 }
 
 /*# sourceMappingURL=style.css.map */
