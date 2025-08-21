@@ -178,7 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const playersContainer = document.querySelector('.amnfr .players-container');
   const playersContainerTBody = playersContainer.querySelector('tbody');
 
-  //localStorage.clear();
   //LOCAL STORAGE - create two players as template and check!
   const playerOneHistory = {
     0: {
@@ -214,6 +213,13 @@ document.addEventListener('DOMContentLoaded', () => {
   playerOneObj.playerHistory = playerTwoHistory;
   playerOneObj.localStorageDataInput();
   // END of MANUAL LOCAL STORAGE INPUT
+
+  // Попап Да/Нет
+  const isContinue = confirm('Продолжить с существующими игроками?');
+
+  if (!isContinue) {
+    localStorage.clear();
+  }
 
   //Retrieve DATA and CREATE ROW
   let IDArray = JSON.parse(localStorage.getItem('allIDArray')) || [];
