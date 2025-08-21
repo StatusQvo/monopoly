@@ -57,18 +57,6 @@ export default class playerManager {
     incomeColumn.textContent = this._newIncome;
     return newRow;
   }
-  inputSelectorInformation(newRow, names) {
-    const newSelection = newRow.querySelector(
-      'td[name="player-selector"] select.custom-select'
-    );
-    names.forEach((name, i) => {
-      let newOption = document.createElement('option');
-      newOption.id = i + 2;
-      newOption.textContent = name;
-      newSelection.appendChild(newOption);
-    });
-    return newRow;
-  }
   inputHistoryInformation(newRow, isNew = true) {
     //Разные IDшки в аккордионе
     const accordionContainer = newRow.querySelector(
@@ -98,7 +86,7 @@ export default class playerManager {
     if (isNew) {
       const objHistory = {
         0: {
-          arrow: ['move-pic--left', 15000000],
+          arrow: ['move-pic--left', this._newIncome],
           sender: 'Вход в игру',
         },
       };
@@ -153,8 +141,10 @@ export default class playerManager {
   }
 
   //ДАННЫЕ в LOCAL STORAGE;
-  localStorageDataInput() {
-    if (this.localStorageIDCheck(this._rowID)) return;
+  localStorageDataInput(isNew = true) {
+    if (isNew) {
+      if (this.localStorageIDCheck(this._rowID)) return;
+    }
 
     let IDArray = JSON.parse(localStorage.getItem('allIDArray')) || [];
     IDArray.push(this._rowID);
@@ -219,7 +209,7 @@ export default class playerManager {
       const divSelect = document.createElement('div');
       divSelect.classList.add('custom-select-wrapper');
       divSelect.innerHTML =
-        "<select class='custom-select'><option value='0'>$ перевод</option><option value='1'>Игровое поле</option></select>";
+        "<select name='selector-element' class='custom-select'><option value='0'>$ перевод</option><option value='1'>Игровое поле</option></select>";
       //push
       const imgPush = document.createElement('img');
       imgPush.setAttribute('src', 'media/mark.svg');
