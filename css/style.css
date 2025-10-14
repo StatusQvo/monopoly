@@ -11898,6 +11898,10 @@ textarea.form-control-lg {
 .amnfr .players-container table tr td {
   border: 1px solid #c5c5c5;
 }
+.amnfr .players-container table tr th:nth-child(3) div {
+  font-size: 10px;
+  color: #4d4d4d;
+}
 .amnfr .players-container table .player-list-item {
   text-align: center;
   min-height: 60px;
